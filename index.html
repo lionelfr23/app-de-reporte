@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distrito de Calapuja</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <h1>Distrito de Calapuja</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="javascript:void(0);" onclick="openVerReportes()">Ver Reportes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Reporte los problemas que hay en tu zona</h1>
+            <p>Reportes de problemas infraestructurales</p>
+            <div class="buttons">
+                <button onclick="openModal('reportarModal')" class="btn red">Reportar Problema</button>
+                <button onclick="openVerReportes()" class="btn green">Ver Reportes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reportes Section -->
+    <section id="reportes" class="content-section">
+        <h2>Sección de Reportes</h2>
+        <p>Consulta los problemas reportados en el distrito y contribuye con soluciones.</p>
+        <div id="reportesList"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="content-section">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna consulta o sugerencia? Contáctanos y trabajemos juntos por un mejor distrito.</p>
+        <p>Email: contacto@calapuja.com</p>
+        <p>Teléfono: 987654321</p>
+        <p>Dirección: Calle Ficticia 123</p>
+    </section>
+
+    <!-- Modal Reporte de Problema -->
+    <div id="reportarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('reportarModal')">×</span>
+            <h2>Enviar Reporte</h2>
+            <form id="reportForm">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required>
+
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" required>
+
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" required>
+
+                <label for="descripcion">Descripción del problema</label>
+                <textarea id="descripcion" required></textarea>
+
+                <button type="submit" class="btn green">Enviar Reporte</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Ver Reportes -->
+    <div id="verReportesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('verReportesModal')">×</span>
+            <h2>Reportes Enviados</h2>
+            <div id="reportesList"></div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>¡Reporte enviado con éxito!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Distrito de Calapuja. Todos los derechos reservados.</p>
+        <p>Creado por Lionel Erdersson Aragós Illanes</p>
+    </footer>
+</body>
+</html>
